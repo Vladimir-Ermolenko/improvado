@@ -62,8 +62,6 @@ with open('first_data.csv') as data_inp:
             field = field.lower()
             if any(map(field.__contains__, metric_keywords)) and not any(map(field.__contains__, out_keywords)):
                 counter += 1
-                print(row)
                 break
 
-    print(counter)
     print(round(counter / total_row_num * 100), '%')
